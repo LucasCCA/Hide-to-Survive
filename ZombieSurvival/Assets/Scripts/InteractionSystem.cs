@@ -11,7 +11,7 @@ public class InteractionSystem : MonoBehaviour
     
     void Start()
     {
-        
+        DisableButton();
     }
 
     // Update is called once per frame
@@ -26,7 +26,27 @@ public class InteractionSystem : MonoBehaviour
 
         if(interactable != null)
         {
-            //Algo acontece
+            Transform botao = interactable.transform.GetChild(0);
+            botao.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            if(Input.GetButtonDown("Fire3"))
+            {
+                //Interacao acontece
+                botao.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                interactable.GetComponent<BoxCollider2D>().enabled = false;
+            }
+        }
+        else
+        {
+            DisableButton();
+        }
+    }
+
+    void DisableButton()
+    {
+        GameObject[] buttons = GameObject.FindGameObjectsWithTag("Button");
+        foreach(GameObject button in buttons)
+        {
+            button.GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 
