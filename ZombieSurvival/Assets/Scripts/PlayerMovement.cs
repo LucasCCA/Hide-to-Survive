@@ -28,11 +28,11 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = movement > 0 ? Quaternion.identity : Quaternion.Euler(0, 180, 0);
         }
 
-        if (Input.GetButton("Horizontal"))
+        if (movement != 0)
         {
             animator.SetBool("Walking", true);
         }
-        else if (Input.GetButtonUp("Horizontal"))
+        else
         {
             animator.SetBool("Walking", false);
         }
