@@ -14,7 +14,6 @@ public class InteractionSystem : MonoBehaviour
         DisableButton();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Interact();
@@ -31,8 +30,8 @@ public class InteractionSystem : MonoBehaviour
             if(Input.GetButtonDown("Fire3"))
             {
                 //Interacao acontece
+                interactable.GetComponent<HidingSystem>().Hide();
                 botao.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-                interactable.GetComponent<BoxCollider2D>().enabled = false;
             }
         }
         else
