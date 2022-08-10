@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Walk();
+        Run();
     }
 
     void Walk()
@@ -35,6 +36,18 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             animator.SetBool("Walking", false);
+        }
+    }
+
+    void Run()
+    {
+        if(Input.GetButton("Jump"))
+        {
+            speed = 6f;
+        }
+        else
+        {
+            speed = 3f;
         }
     }
 }
