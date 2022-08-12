@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 1238870325}
   - component: {fileID: 1238870326}
   - component: {fileID: 1238870327}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -543,7 +543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238870322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.6, y: -1.27, z: 0}
+  m_LocalPosition: {x: 3.18, y: -1.24, z: 0}
   m_LocalScale: {x: 0.92045, y: 0.92045, z: 0.92045}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -580,7 +580,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 1545214817}
   - component: {fileID: 1545214816}
   - component: {fileID: 1545214820}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Estalador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.322268, y: 4.02}
-    newSize: {x: 1.3313003, y: 4.02}
+    newSize: {x: 2.322268, y: 4.02}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -721,7 +721,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.3313003, y: 4.02}
+  m_Size: {x: 2.322268, y: 4.02}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -759,6 +759,6 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  range: 5
-  colliderDistance: 0
-  animator: {fileID: 0}
+  range: 0
+  colliderDistance: 2.5
+  animator: {fileID: 1545214816}

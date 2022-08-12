@@ -10,8 +10,10 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float range;
     [SerializeField] private float colliderDistance;
     [SerializeField] private Animator animator;
-
-    private void Start()
+    
+    
+  
+    private void Awake()
     {
         animator = GetComponent<Animator>();
     }
@@ -19,14 +21,15 @@ public class EnemyAI : MonoBehaviour
     {
         if (PlayerinSight())
         {
-            Debug.Log("MIMI");
-        }
+            animator.SetTrigger("levantaMao");
+            animator.SetBool("ataqueEstalador", true);
+        }   
     }
     private bool PlayerinSight()
     {
         Vector2 hitOrigin = boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance;
         Vector3 hitSize = new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z);
-        RaycastHit2D hit = Physics2D.BoxCast(hitOrigin, hitSize, 0, Vector2.left, playerLayer);
+        RaycastHit2D hit = Physics2D.BoxCast(hitOrigin, hitSize, 0, Vector2.left, 0, playerLayer);
         return hit.collider != null;
     }
 
@@ -37,5 +40,13 @@ public class EnemyAI : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(hitDrawCenter, hitDrawSize);
     }
+    private void EstaladorAtack()
+    {
+        if (PlayerinSight())
+        {
+            animator.SetTrigger("levantaMao");
+            animator.SetBool("ataqueEstalador", true);
+        }
 
+    }
 }
