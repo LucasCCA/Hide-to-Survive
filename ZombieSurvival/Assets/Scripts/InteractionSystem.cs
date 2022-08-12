@@ -29,9 +29,14 @@ public class InteractionSystem : MonoBehaviour
             botao.gameObject.GetComponent<SpriteRenderer>().enabled = true;
             if(Input.GetButtonDown("Fire3"))
             {
-                //Interacao acontece
-                interactable.GetComponent<HidingSystem>().Hide();
-                botao.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                if(interactable.CompareTag("HidingSpot"))
+                { 
+                    interactable.GetComponent<HidingSystem>().Hide();
+                }
+                else if(interactable.CompareTag("Enemy"))
+                {
+                    //mata o inimigo
+                }
             }
         }
         else
