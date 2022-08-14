@@ -12,8 +12,6 @@ public class StaminaSystem : MonoBehaviour
 
     public float decreaseValue = 15f;
     public float regenValue = 30f;
-
-    private Coroutine regen;
    
     void Start()
     {
@@ -31,19 +29,14 @@ public class StaminaSystem : MonoBehaviour
     {
         if(Input.GetButton("Jump") && Input.GetButton("Horizontal"))
         {
-            if(currentStamina > 0)
+            if (currentStamina > 0)
             {
                 currentStamina -= decreaseValue * Time.deltaTime;
             }    
         }
         else if (Input.GetButtonUp("Jump"))
         {
-            if(regen != null)
-            {
-                StopCoroutine(regen);
-            }
-
-            regen = StartCoroutine(RegenStamina());
+            StartCoroutine(RegenStamina());
         }
     }
 
@@ -56,6 +49,5 @@ public class StaminaSystem : MonoBehaviour
             currentStamina += regenValue * Time.deltaTime;
             yield return new WaitForSeconds(0.1f);
         }
-        regen = null;
     }
 }
