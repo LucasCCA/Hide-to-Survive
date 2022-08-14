@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 234025458}
   - component: {fileID: 234025457}
   - component: {fileID: 234025460}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: TesteEsconderijo
   m_TagString: HidingSpot
   m_Icon: {fileID: 0}
