@@ -14,6 +14,10 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField] private float enemySpeed;
 
     private Vector3 initScale;
+    private bool movingLeft;
+
+    [Header("Enemy Animator")]
+    [SerializeField] private Animator animator;
     void Awake()
     {
         initScale = transform.localScale;
@@ -22,11 +26,41 @@ public class EnemyPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveinDirection(1);
+        
+        if(movingLeft)
+        {
+            if(enemy.position.x >= leftEdge.position.x)
+            {
+                MoveinDirection(-1);
+            }
+            else
+            {
+                DirectionChange();
+            }
+            
+        }
+        else
+        {
+            if (enemy.position.x <= rightEdge.position.x)
+            {
+                MoveinDirection(1);
+            }
+            else
+            {
+                DirectionChange();
+            }
+        }
+        
+    }
+
+    private void DirectionChange()
+    {
+        movingLeft = !movingLeft;
     }
 
     private void MoveinDirection(int direction)
     {
+ 
         enemy.localScale = new Vector3 (Mathf.Abs(initScale.x) * direction, initScale.y, initScale.z);
         float axisX = enemy.position.x + Time.deltaTime * direction * enemySpeed;
         enemy.position = new Vector3(axisX, enemy.position.y, enemy.position.z);

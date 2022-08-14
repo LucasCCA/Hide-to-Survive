@@ -19,11 +19,7 @@ public class EnemyAI : MonoBehaviour
     }
     private void Update()
     {
-        if (PlayerinSight())
-        {
-            animator.SetTrigger("levantaMao");
-            animator.SetBool("ataqueEstalador", true);
-        }   
+        EstaladorAttack();
     }
     private bool PlayerinSight()
     {
@@ -40,13 +36,27 @@ public class EnemyAI : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(hitDrawCenter, hitDrawSize);
     }
-    private void EstaladorAtack()
+    private void EstaladorAttack()
     {
         if (PlayerinSight())
         {
-            animator.SetTrigger("levantaMao");
+            animator.SetTrigger("levantaMaoo");
             animator.SetBool("ataqueEstalador", true);
+           
+        }
+        else
+        {
+            animator.ResetTrigger("levantaMaoo");
+            animator.SetBool("ataqueEstalador", false);
         }
 
+    }
+
+    private void DamagePlayer()
+    {
+        if(PlayerinSight())
+        {
+
+        }
     }
 }

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    private int maxHealth = 100;
-    public int currentHealth;
+    private int enemyMaxHealth = 100;
+    public int enemyCurrentHealth;
 
     void Start()
     {
-        currentHealth = maxHealth;
+        enemyCurrentHealth = enemyMaxHealth;
     }
 
     // Update is called once per frame
