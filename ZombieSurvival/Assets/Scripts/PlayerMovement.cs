@@ -8,9 +8,12 @@ public class PlayerMovement : MonoBehaviour
 
     Animator animator;
 
+    StaminaSystem staminaSystem;
+
     void Start()
     {
         animator = GetComponent<Animator>();
+        staminaSystem = GetComponent<StaminaSystem>();
     }
 
     void Update()
@@ -41,11 +44,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Run()
     {
-        if(Input.GetButton("Jump"))
+        if(Input.GetButton("Jump") && Input.GetButton("Horizontal"))
         {
-            speed = 6f;
+            if (staminaSystem.currentStamina > 0)
+            {
+                speed = 6f;
+            }
+            else if (staminaSystem.currentStamina <= 0)
+            {
+                speed = 3f;
+            }
         }
-        else
+        else if(Input.GetButtonUp("Jump"))
         {
             speed = 3f;
         }
