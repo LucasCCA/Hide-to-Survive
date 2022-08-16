@@ -11,7 +11,7 @@ public class StaminaSystem : MonoBehaviour
     public float currentStamina;
 
     public float decreaseValue = 15f;
-    public float regenValue = 30f;
+    public float regenValue = 150f;
    
     void Start()
     {
@@ -47,7 +47,9 @@ public class StaminaSystem : MonoBehaviour
         while (currentStamina < maxStamina)
         {
             currentStamina += regenValue * Time.deltaTime;
-            yield return new WaitForSeconds(0.1f);
+            if (Input.GetButton("Jump") && Input.GetButton("Horizontal"))
+                break;
+            yield return new WaitForSeconds(0.01f);
         }
     }
 }

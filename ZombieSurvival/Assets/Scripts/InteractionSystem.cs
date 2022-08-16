@@ -8,11 +8,6 @@ public class InteractionSystem : MonoBehaviour
     [SerializeField] float interactionRange = 1f;
 
     [SerializeField] LayerMask interactionLayers;
-    
-    void Start()
-    {
-        DisableButton();
-    }
 
     void Update()
     {

@@ -7,13 +7,6 @@ public class HidingSystem : MonoBehaviour
     public Transform player;
     public Transform hidingSpot;
 
-    Transform tutorialButton;
-
-    void Start()
-    {
-        tutorialButton = transform.GetChild(0);
-    }
-
     void Update()
     {
         Unhide();
@@ -23,8 +16,6 @@ public class HidingSystem : MonoBehaviour
     {
         player.position = hidingSpot.position;
         player.gameObject.SetActive(false);
-
-        tutorialButton.GetComponent<SpriteRenderer>().enabled = true;
     }
 
     public void Unhide()
@@ -34,8 +25,6 @@ public class HidingSystem : MonoBehaviour
             if (Input.GetButtonDown("Fire3"))
             {
                 player.gameObject.SetActive(true);
-
-                tutorialButton.GetComponent<SpriteRenderer>().enabled = false;
             }
         }
     }
