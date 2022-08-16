@@ -14,7 +14,9 @@ public class HidingSystem : MonoBehaviour
 
     public void Hide()
     {
-        player.position = hidingSpot.position;
+        Vector3 hidingPos = new Vector3(hidingSpot.position.x, player.position.y, player.position.z);
+        player.position = hidingPos;
+
         player.gameObject.SetActive(false);
     }
 
