@@ -17,6 +17,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Awake()
     {
+        
         animator = GetComponent<Animator>();
     }
     private void Update()
