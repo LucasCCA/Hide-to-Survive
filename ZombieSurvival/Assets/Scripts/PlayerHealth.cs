@@ -1,21 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int playerCurrentHealth;
-    int playerMaxHealth = 100;
-    // Start is called before the first frame update
+    public float playerCurrentHealth;
+    private float playerMaxHealth = 100f;
+    [SerializeField] private Image barraDeVida;
+    
     void Start()
     {
         playerCurrentHealth = playerMaxHealth;
     }
 
-    // Update is called once per frame
     void Update()
     {
         KillPlayer();
+        LifeBar();
+    }
+
+    private void LifeBar()
+    {
+        barraDeVida.fillAmount = playerCurrentHealth/playerMaxHealth;
     }
 
     public void KillPlayer()

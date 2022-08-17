@@ -62,10 +62,9 @@ public class EnemyAI : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             EnemyKillPlayer();
-            playerHealth.KillPlayer();
         }
     }
-    private int EnemyKillPlayer()
+    private float EnemyKillPlayer()
     {
         return playerHealth.playerCurrentHealth -= damage;
     }
