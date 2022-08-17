@@ -146,14 +146,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7518998bceb0ac4d825e3a3c846daaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 9
+  damage: 100
   boxCollider: {fileID: 4346364339685187776}
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  range: 0
-  colliderDistance: 2.5
+  range: 1
+  colliderDistance: 2
   animator: {fileID: 4346364339685187777}
+  playerHealth: {fileID: 0}
+  enemyPatrol: {fileID: 0}
 --- !u!1 &7012263954180839837
 GameObject:
   m_ObjectHideFlags: 0

@@ -60,12 +60,12 @@ public class EnemyAI : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            KillPlayer();
-            Destroy(other.gameObject);
+            EnemyKillPlayer();
+            playerHealth.KillPlayer();
         }
     }
-    private void KillPlayer()
+    private int EnemyKillPlayer()
     {
-        playerHealth.playerCurrentHealth = 0;
+        return playerHealth.playerCurrentHealth -= damage;
     }
 }
