@@ -17,16 +17,22 @@ public class HidingSystem : MonoBehaviour
         Vector2 hidingPos = new Vector2(hidingSpot.position.x, player.position.y);
         player.position = hidingPos;
 
-        player.gameObject.SetActive(false);
+        player.GetComponent<SpriteRenderer>().enabled = false;
+        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<InteractionSystem>().enabled = false;
+        player.GetComponent<BoxCollider2D>().enabled = false;
     }
 
     public void Unhide()
     {
-        if (player.gameObject.activeSelf == false)
+        if (player.GetComponent<SpriteRenderer>().enabled == false && player.position.x == hidingSpot.position.x)
         {
             if (Input.GetButtonDown("Fire3"))
             {
-                player.gameObject.SetActive(true);
+                player.GetComponent<SpriteRenderer>().enabled = true;
+                player.GetComponent<PlayerMovement>().enabled = true;
+                player.GetComponent<InteractionSystem>().enabled = true;
+                player.GetComponent<BoxCollider2D>().enabled = true;
             }
         }
     }
