@@ -352,6 +352,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278996926}
   m_CullTransparentMesh: 1
+--- !u!1 &375827230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4346364339685187838, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
+  m_PrefabInstance: {fileID: 4346364339079773089}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &490113468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,7 +1488,7 @@ GameObject:
   - component: {fileID: 1238870328}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1897,6 +1902,27 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 4346364339685187777, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
   m_PrefabInstance: {fileID: 4346364339079773089}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1545214825
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375827230}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1676528007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,7 +2144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346364339685187778, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.061102305
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4346364339685187778, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2153,12 +2179,24 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4346364339685187781, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
+      propertyPath: enemyPatrol
+      value: 
+      objectReference: {fileID: 149006960}
+    - target: {fileID: 4346364339685187781, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1238870328}
+    - target: {fileID: 4346364339685187781, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
       propertyPath: colliderDistance
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4346364339685187838, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
       propertyPath: m_Name
       value: Estalador
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346364339685187838, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c829465ea24fd024999f599a6e668c2e, type: 3}

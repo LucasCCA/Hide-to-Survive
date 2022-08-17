@@ -10,16 +10,18 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float range;
     [SerializeField] private float colliderDistance;
     [SerializeField] private Animator animator;
-    
-    
-  
+    [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private EnemyPatrol enemyPatrol;
+
+
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
     }
     private void Update()
     {
-        EstaladorAttack();
+        SetAttack();
     }
     private bool PlayerinSight()
     {
@@ -36,27 +38,34 @@ public class EnemyAI : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(hitDrawCenter, hitDrawSize);
     }
-    private void EstaladorAttack()
+    private void SetAttack()
     {
         if (PlayerinSight())
         {
             animator.SetTrigger("levantaMaoo");
             animator.SetBool("ataqueEstalador", true);
+            enemyPatrol.enemySpeed = 5;
            
         }
         else
         {
             animator.ResetTrigger("levantaMaoo");
             animator.SetBool("ataqueEstalador", false);
+            enemyPatrol.enemySpeed = 1;
         }
 
     }
 
-    private void DamagePlayer()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(PlayerinSight())
+        if(other.gameObject.CompareTag("Player"))
         {
-
+            KillPlayer();
+            Destroy(other.gameObject);
         }
+    }
+    private void KillPlayer()
+    {
+        playerHealth.playerCurrentHealth = 0;
     }
 }
