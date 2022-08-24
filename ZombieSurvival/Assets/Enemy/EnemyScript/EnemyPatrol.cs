@@ -12,6 +12,7 @@ public class EnemyPatrol : MonoBehaviour
 
     [Header("Move parameters")]
     public float enemySpeed;
+    [SerializeField]private EnemyAI enemyAI;
 
     private Vector3 initScale;
     private bool movingLeft;
@@ -32,6 +33,7 @@ public class EnemyPatrol : MonoBehaviour
             if(enemy.position.x >= leftEdge.position.x)
             {
                 MoveinDirection(-1);
+                UpdateRangeWhenInLeft();
             }
             else
             {
@@ -64,5 +66,10 @@ public class EnemyPatrol : MonoBehaviour
         enemy.localScale = new Vector3 (Mathf.Abs(initScale.x) * direction, initScale.y, initScale.z);
         float axisX = enemy.position.x + Time.deltaTime * direction * enemySpeed;
         enemy.position = new Vector3(axisX, enemy.position.y, enemy.position.z);
+    }
+
+    private void UpdateRangeWhenInLeft()
+    {
+        enemyAI.range = enemy.position.x - leftEdge.position.x;
     }
 }

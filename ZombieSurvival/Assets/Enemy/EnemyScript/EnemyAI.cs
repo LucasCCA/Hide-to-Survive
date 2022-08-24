@@ -7,11 +7,11 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
-    [SerializeField] private float range;
     [SerializeField] private float colliderDistance;
     [SerializeField] private Animator animator;
     [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private EnemyPatrol enemyPatrol;
+    public float range;
 
 
 
@@ -20,6 +20,7 @@ public class EnemyAI : MonoBehaviour
         
         animator = GetComponent<Animator>();
     }
+
     private void Update()
     {
         SetAttack();
