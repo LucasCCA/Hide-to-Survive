@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class StaminaSystem : MonoBehaviour
 {
-    [SerializeField] Slider staminaSlider;
+    [SerializeField] GameObject staminaBar;
+
+    [SerializeField] Image staminaFill;
 
     private float maxStamina = 100;
     public float currentStamina;
@@ -16,13 +18,13 @@ public class StaminaSystem : MonoBehaviour
     void Start()
     {
         currentStamina = maxStamina;
-        staminaSlider.maxValue = maxStamina;
     }
 
     void Update()
     {
-        staminaSlider.value = currentStamina;
+        staminaFill.fillAmount = currentStamina / maxStamina;
         DecreaseStamina();
+        EnableStaminaBar();
     }
 
     void DecreaseStamina()
@@ -37,6 +39,18 @@ public class StaminaSystem : MonoBehaviour
         else if (Input.GetButtonUp("Jump"))
         {
             StartCoroutine(RegenStamina());
+        }
+    }
+
+    void EnableStaminaBar()
+    {
+        if (currentStamina < maxStamina)
+        {
+            staminaBar.SetActive(true);
+        }
+        else
+        {
+            staminaBar.SetActive(false);
         }
     }
 
