@@ -38,6 +38,7 @@ public class EnemyPatrol : MonoBehaviour
             else
             {
                 DirectionChange();
+                
             }
             
         }
@@ -46,6 +47,7 @@ public class EnemyPatrol : MonoBehaviour
             if (enemy.position.x <= rightEdge.position.x)
             {
                 MoveinDirection(1);
+                UpdateRangeWhenInRight();
             }
             else
             {
@@ -70,6 +72,11 @@ public class EnemyPatrol : MonoBehaviour
 
     private void UpdateRangeWhenInLeft()
     {
-        enemyAI.range = enemy.position.x - leftEdge.position.x;
+        enemyAI.range =  (Mathf.Abs(leftEdge.position.x - enemy.position.x))/2;
+    }
+
+    private void UpdateRangeWhenInRight()
+    {
+        enemyAI.range = (rightEdge.position.x - enemy.position.x)/2;
     }
 }
