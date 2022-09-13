@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: be040100
-      m_LastClickedID: 66750
-      m_ExpandedIDs: 3e96feffe696feff5e99feff6aabffff6cabffff3aadffff6ccb000086cb0000f8cb0000e6030100aa040100
+      m_SelectedIDs: 3c6d0000
+      m_LastClickedID: 27964
+      m_ExpandedIDs: 02fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -525,9 +525,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -44.177086, y: 6.682098, z: -1.0655868}
+    m_Target: {x: -15.426543, y: 1.6537986, z: 3.9593124}
     speed: 2
-    m_Value: {x: -44.177086, y: 6.682098, z: -1.0655868}
+    m_Value: {x: -15.426543, y: 1.6537986, z: 3.9593124}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -578,9 +578,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.5987736
+    m_Target: 20.208359
     speed: 2
-    m_Value: 1.5987736
+    m_Value: 20.208359
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -625,10 +625,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 187
+    x: 577
     y: 73
-    width: 1276
-    height: 545
+    width: 886
+    height: 544
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -754,22 +754,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Cenario
+    - Assets/Enemy/EnemyPrefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Cenario
+  - Assets/Enemy/EnemyPrefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\J\xFAlia V\\Documents\\MeusDocs\\PI2\\Projeto\\ZombieSurvival"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 16cb0000
-    m_LastClickedID: 51990
-    m_ExpandedIDs: 0000000012cb000000ca9a3bffffff7f
+    m_SelectedIDs: 08710000
+    m_LastClickedID: 28936
+    m_ExpandedIDs: 00000000346f0000c470000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -797,7 +797,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000012cb000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000346f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -822,8 +822,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: be040100
-    m_LastClickedInstanceID: 66750
+    m_SelectedInstanceIDs: 3c6d0000
+    m_LastClickedInstanceID: 27964
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
