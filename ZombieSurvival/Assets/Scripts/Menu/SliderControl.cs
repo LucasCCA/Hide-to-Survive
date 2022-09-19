@@ -8,7 +8,6 @@ using Unity.VisualScripting;
 public class SliderControl : MonoBehaviour
 {
     [SerializeField] Slider slider;
-    [SerializeField] Button button;
 
     // Update is called once per frame
     void Update()
