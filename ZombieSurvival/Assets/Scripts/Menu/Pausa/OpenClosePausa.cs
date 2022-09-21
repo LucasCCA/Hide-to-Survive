@@ -8,7 +8,7 @@ public class OpenClosePausa : MonoBehaviour
     [SerializeField] GameObject gameObject;
     void Start()
     {
-        gameObject.SetActive(false);
+        ClosePausa();
     }
 
     // Update is called once per frame
@@ -23,13 +23,20 @@ public class OpenClosePausa : MonoBehaviour
         {
             if (gameObject.activeSelf)
             {
-                gameObject.SetActive(false);
+                ClosePausa();
             }
             else
             {
                 gameObject.SetActive(true);
+                Time.timeScale = 0f;
             }
         }
+    }
+
+    public void ClosePausa()
+    {
+        gameObject.SetActive(false);
+        Time.timeScale = 1f;
     }
 
 }
