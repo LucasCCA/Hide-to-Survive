@@ -2024,6 +2024,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0013f5792f8aea64284f90ba9e67d3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &688543708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 688543710}
+  - component: {fileID: 688543709}
+  m_Layer: 0
+  m_Name: LoadingScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &688543709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688543708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae27f0cee9f27d49997f8a2a3a70804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &688543710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688543708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0390371, y: 1.3940127, z: -0.043712232}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &720921730
 GameObject:
   m_ObjectHideFlags: 0
@@ -2215,6 +2259,7 @@ GameObject:
   - component: {fileID: 815512666}
   - component: {fileID: 815512665}
   - component: {fileID: 815512668}
+  - component: {fileID: 815512669}
   m_Layer: 5
   m_Name: Novo Jogo
   m_TagString: Untagged
@@ -2285,7 +2330,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 815512666}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 815512669}
+        m_TargetAssemblyTypeName: ChangeScenee, Assembly-CSharp
+        m_MethodName: ChangeSc
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &815512666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2353,6 +2410,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &815512669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815512663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a83ac3ebec2ecf344b6cbe1e3ca0748f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cena: Tutorial
 --- !u!1 &827438559
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class OpenCloseOpcoesPausa : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class OpenCloseOpcoesPausa : MonoBehaviour
         {
             pausaMorteGameObject.SetActive(false);
             gameObject.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
         }
     }
 
@@ -32,7 +34,7 @@ public class OpenCloseOpcoesPausa : MonoBehaviour
         {
             pausaMorteGameObject.SetActive(false);
         }
-        
+     
         
     }
 }

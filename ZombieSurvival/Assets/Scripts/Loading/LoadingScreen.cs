@@ -17,7 +17,7 @@ public class LoadingScreen : MonoBehaviour
 
     public void ChangeScene(string sceneName)/*o sceneName vai ser fornecido por quem chamar essa funcao*/
     {
-        SceneManager.LoadScene("Carregando");/*Chamar a cena de carregamento*/
+        SceneManager.LoadScene("LoadingScene");/*Chamar a cena de carregamento*/
         StartCoroutine(LoadingSceneCoroutine(sceneName));/*Iniciar uma coroutine(executa um metodo de forma simultanea)*/
     }
 
@@ -34,7 +34,7 @@ public class LoadingScreen : MonoBehaviour
             antes de permitir que a cena termine de ser carregada*/
             if (currentOperation.progress >= 0.9f)
             {
-                yield return new WaitForSeconds(3f);
+                yield return new WaitForSeconds(1f);
                 currentOperation.allowSceneActivation = true;
             }
             yield return null;/*Pular mais um frame*/

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class OpenClosePausa : MonoBehaviour
 {
@@ -28,7 +29,6 @@ public class OpenClosePausa : MonoBehaviour
             else
             {
                 gameObject.SetActive(true);
-                Time.timeScale = 0f;
             }
         }
     }
@@ -36,7 +36,7 @@ public class OpenClosePausa : MonoBehaviour
     public void ClosePausa()
     {
         gameObject.SetActive(false);
-        Time.timeScale = 1f;
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
 }
