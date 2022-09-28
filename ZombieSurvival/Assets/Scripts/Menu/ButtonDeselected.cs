@@ -7,10 +7,12 @@ using UnityEngine.UI;
 public class ButtonDeselected : MonoBehaviour
 {
     [SerializeField] Button button;
+    [SerializeField] GameObject NiveisGO;
 
     void Update()
     {
         SelectButton();
+        SelectNiveis();
     }
 
     void SelectButton()
@@ -21,6 +23,26 @@ public class ButtonDeselected : MonoBehaviour
             if (value != 0)
             {
                 button.Select();
+            }
+        }
+    }
+
+    void SelectNiveis()
+    {
+        float valueVertical = Input.GetAxisRaw("Vertical");
+        float valueHorizontal = Input.GetAxisRaw("Horizontal");
+
+        if (NiveisGO != null)
+        {
+            if (NiveisGO.activeSelf)
+            {
+                if (EventSystem.current.currentSelectedGameObject == null)
+                {
+                    if (valueHorizontal != 0 || valueVertical != 0)
+                    {
+                        button.Select();
+                    }
+                }
             }
         }
     }
