@@ -27,11 +27,6 @@ public class PlayerMovement : MonoBehaviour
         float movement = Input.GetAxis("Horizontal");
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * speed;
 
-        if (!Mathf.Approximately(0, movement))
-        {
-            transform.rotation = movement > 0 ? Quaternion.identity : Quaternion.Euler(0, 180, 0);
-        }
-
         if (movement != 0)
         {
             animator.SetBool("Walking", true);
