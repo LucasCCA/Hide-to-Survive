@@ -14,6 +14,9 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] PlayerMovement pm;
 
+    public float attackRate = 2f;
+    float nextAttackTime = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,30 +26,30 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Attack();
+        if(Time.time >= nextAttackTime)
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Attack();
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
+        }
     }
 
     void Attack()
     {
-        if (Input.GetMouseButtonDown(0))
+        //Play Animation
+        animator.SetTrigger("Attack");
+
+        StartCoroutine(StopWalking());
+
+        //Detect enemies in range
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+        //Damage
+        foreach (Collider2D enemy in hitEnemies)
         {
-            pm.enabled = false;
-
-            //Play Animation
-            animator.SetTrigger("Attack");
-
-            //Detect enemies in range
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-
-            //Damage
-            foreach (Collider2D enemy in hitEnemies)
-            {
-                Debug.Log("acertou"); //enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
-            }
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            pm.enabled = true;
+            Debug.Log("acertou"); //enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
         }
     }
 
@@ -58,5 +61,14 @@ public class PlayerAttack : MonoBehaviour
         }
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    IEnumerator StopWalking()
+    {
+        pm.enabled = false;
+
+        yield return new WaitForSeconds(0.5f);
+
+        pm.enabled = true;
     }
 }

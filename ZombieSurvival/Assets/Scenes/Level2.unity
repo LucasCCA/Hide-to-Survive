@@ -7874,6 +7874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165d1214255f9b245b0420cbbc15d602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1238870324}
   interactionPoint: {fileID: 1130056060}
   interactionRange: 1
   interactionLayers:
@@ -7931,6 +7932,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   pm: {fileID: 1238870327}
+  attackRate: 2
 --- !u!1 &1243771035
 GameObject:
   m_ObjectHideFlags: 0

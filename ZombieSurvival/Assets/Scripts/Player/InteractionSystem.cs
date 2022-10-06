@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class InteractionSystem : MonoBehaviour
 {
+    public Transform player;
+
     [SerializeField] Transform interactionPoint;
     [SerializeField] float interactionRange = 1f;
 
@@ -20,17 +24,29 @@ public class InteractionSystem : MonoBehaviour
 
         if(interactable != null)
         {
+            Transform hidingSpot = interactable.transform;
             Transform botao = interactable.transform.GetChild(0);
             botao.gameObject.GetComponent<SpriteRenderer>().enabled = true;
             if(Input.GetButtonDown("Fire3"))
             {
-                if(interactable.CompareTag("HidingSpot"))
-                { 
-                    interactable.GetComponent<HidingSystem>().Hide();
-                }
-                else if(interactable.CompareTag("Enemy"))
+                if(interactable.gameObject.CompareTag("HidingSpot"))
                 {
-                    //mata o inimigo
+                    if (player.GetComponent<SpriteRenderer>().enabled == false && player.position.x == hidingSpot.position.x)
+                    {
+                        player.GetComponent<SpriteRenderer>().enabled = true;
+                        player.GetComponent<PlayerMovement>().enabled = true;
+                        player.GetComponent<BoxCollider2D>().enabled = true;
+                    }
+                    else
+                    {
+                        Vector2 hidingPos = new Vector2(hidingSpot.position.x, player.position.y);
+
+                        player.GetComponent<SpriteRenderer>().enabled = false;
+                        player.GetComponent<PlayerMovement>().enabled = false;
+                        player.GetComponent<BoxCollider2D>().enabled = false;
+
+                        player.position = hidingPos;
+                    }
                 }
             }
         }

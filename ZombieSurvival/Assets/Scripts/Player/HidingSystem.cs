@@ -9,18 +9,19 @@ public class HidingSystem : MonoBehaviour
 
     void Update()
     {
-        Unhide();
+        //Unhide();
     }
 
     public void Hide()
     {
         Vector2 hidingPos = new Vector2(hidingSpot.position.x, player.position.y);
-        player.position = hidingPos;
 
         player.GetComponent<SpriteRenderer>().enabled = false;
         player.GetComponent<PlayerMovement>().enabled = false;
         player.GetComponent<InteractionSystem>().enabled = false;
         player.GetComponent<BoxCollider2D>().enabled = false;
+
+        player.position = hidingPos;
     }
 
     public void Unhide()
