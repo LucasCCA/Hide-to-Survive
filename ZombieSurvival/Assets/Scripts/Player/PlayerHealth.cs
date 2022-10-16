@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float playerCurrentHealth;
+    public static float playerCurrentHealth;
     private float playerMaxHealth = 100f;
     [SerializeField] private Image barraDeVida;
     

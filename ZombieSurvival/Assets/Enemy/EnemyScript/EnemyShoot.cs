@@ -9,7 +9,9 @@ public class EnemyShoot : MonoBehaviour
     public EnemyAIBichoEsgoto enemyAIEsgoto;
     [SerializeField] private Animator anim;
     public float attackRate = 2f;
-    float nextAttackTime = 0f;
+    private float nextAttackTime = 0f;
+    private bool ativaAtaque = false;
+    //[SerializeField] float velocity = 4f;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -18,21 +20,22 @@ public class EnemyShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemyAIEsgoto.PlayerInSight())
+        if(enemyAIEsgoto.PlayerInSight())
+        {
+            ativaAtaque = true;
+        }
+        if (ativaAtaque)
         {
             anim.SetTrigger("aparecerEsgoto");
             
             if(Time.time >= nextAttackTime)
             {
                 Shoot();
-                nextAttackTime = Time.time + 2f;
+                nextAttackTime = Time.time + 4f;
             }
            
         }
-        else
-        {
-            anim.SetTrigger("sumirEsgoto");
-        }
+
         
     }
 

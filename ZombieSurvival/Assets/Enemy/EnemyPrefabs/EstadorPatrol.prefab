@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2252998230599653060}
   m_Layer: 0
   m_Name: EstadorPatrol
-  m_TagString: Untagged
+  m_TagString: Estalador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
   rightEdge: {fileID: 2252998231604867252}
   enemy: {fileID: 2252998231875282903}
   enemySpeed: 1
-  enemyAI: {fileID: 2252998231875282896}
+  enemyAI: {fileID: 0}
   animator: {fileID: 2252998231875282900}
 --- !u!1 &2252998231050391021
 GameObject:
@@ -124,11 +124,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4346364339685187776, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
       propertyPath: m_Size.x
-      value: 1.9535995
+      value: 1.4487612
       objectReference: {fileID: 0}
     - target: {fileID: 4346364339685187776, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.16594672
+      value: -0.058730483
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346364339685187776, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4346364339685187778, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
       propertyPath: m_RootOrder
@@ -196,21 +200,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346364339685187838, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Estalador
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
---- !u!114 &2252998231875282896 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4346364339685187781, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
-  m_PrefabInstance: {fileID: 2527964848136783637}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2252998231875282923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7518998bceb0ac4d825e3a3c846daaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2252998231875282900 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4346364339685187777, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
@@ -241,7 +234,7 @@ Rigidbody2D:
   m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

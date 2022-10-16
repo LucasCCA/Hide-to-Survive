@@ -27,6 +27,6 @@ public class OpenCloseMorte : MonoBehaviour
 
     bool PlayerLives()
     {
-        return (playerHealth.playerCurrentHealth > 0);
+        return (PlayerHealth.playerCurrentHealth > 0);
     }
 }

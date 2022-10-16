@@ -32,8 +32,7 @@ public class EnemyPatrolEstalador : MonoBehaviour
         {
             if(enemy.position.x >= leftEdge.position.x)
             {
-                MoveinDirection(-1);
-                UpdateRangeWhenInLeft();
+                UpdateCourseLeft();
             }
             else
             {
@@ -46,8 +45,7 @@ public class EnemyPatrolEstalador : MonoBehaviour
         {
             if (enemy.position.x <= rightEdge.position.x)
             {
-                MoveinDirection(1);
-                UpdateRangeWhenInRight();
+                UpdateCourseRight();
             }
             else
             {
@@ -57,15 +55,14 @@ public class EnemyPatrolEstalador : MonoBehaviour
         
     }
 
-    private void DirectionChange()
+    public void DirectionChange()
     {
         movingLeft = !movingLeft;
     }
 
-    private void MoveinDirection(int direction)
+    public void MoveinDirection(int direction)
     {
- 
-        enemy.localScale = new Vector3 (Mathf.Abs(initScale.x) * direction, initScale.y, initScale.z);
+         enemy.localScale = new Vector3 (Mathf.Abs(initScale.x) * direction, initScale.y, initScale.z);
         float axisX = enemy.position.x + Time.deltaTime * direction * enemySpeed;
         enemy.position = new Vector3(axisX, enemy.position.y, enemy.position.z);
     }
@@ -78,5 +75,17 @@ public class EnemyPatrolEstalador : MonoBehaviour
     private void UpdateRangeWhenInRight()
     {
         enemyAI.range = (rightEdge.position.x - enemy.position.x)/2;
+    }
+
+    public void UpdateCourseLeft()
+    {
+        MoveinDirection(-1);
+        UpdateRangeWhenInLeft();
+    }
+
+    public void UpdateCourseRight()
+    {
+        MoveinDirection(1);
+        UpdateRangeWhenInRight();
     }
 }

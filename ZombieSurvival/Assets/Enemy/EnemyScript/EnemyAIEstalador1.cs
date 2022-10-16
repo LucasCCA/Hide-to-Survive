@@ -18,7 +18,6 @@ public class EnemyAIEstalador1 : MonoBehaviour
     private void Awake()
     {
 
-        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -68,6 +67,6 @@ public class EnemyAIEstalador1 : MonoBehaviour
     }
     private float EnemyKillPlayer()
     {
-        return playerHealth.playerCurrentHealth -= damage;
+        return PlayerHealth.playerCurrentHealth -= damage;
     }
 }

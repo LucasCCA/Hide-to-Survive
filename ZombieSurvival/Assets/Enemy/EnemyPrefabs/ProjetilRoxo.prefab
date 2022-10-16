@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5483490892020853017}
   - component: {fileID: 3639626598988448569}
   - component: {fileID: 8651337024452704685}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: ProjetilRoxo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,6 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  damage: 20
   rb: {fileID: 5483490892020853017}
-  enemyAi: {fileID: 0}
-  bichoEsgotoTransform: {fileID: 4145909742731998710}

@@ -11,23 +11,12 @@ public class EnemyAIBichoEsgoto : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private PlayerHealth playerHealth;
     public float range;
-    public Vector3 hitSize;
+    
 
-
-    private void Awake()
-    {
-
-        animator = GetComponent<Animator>();
-    }
-
-    private void Update()
-    {
-        
-    }
     public bool PlayerInSight()
     {
         Vector2 hitOrigin = boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance;
-        hitSize = new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z);
+        Vector3 hitSize = new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z);
         RaycastHit2D hit = Physics2D.BoxCast(hitOrigin, hitSize, 0, Vector2.left, 0, playerLayer);
         return hit.collider != null;
     }
@@ -40,8 +29,5 @@ public class EnemyAIBichoEsgoto : MonoBehaviour
         Gizmos.DrawWireCube(hitDrawCenter, hitDrawSize);
     }
    
-    private float EnemyKillPlayer()
-    {
-        return playerHealth.playerCurrentHealth -= damage;
-    }
+
 }

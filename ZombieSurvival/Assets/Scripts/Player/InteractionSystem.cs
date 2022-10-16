@@ -48,6 +48,10 @@ public class InteractionSystem : MonoBehaviour
                         player.position = hidingPos;
                     }
                 }
+                if (interactable.gameObject.CompareTag("NextLevel"))
+                {
+                    interactable.GetComponent<ChangeScenee>().ChangeSc();
+                }
             }
         }
         else
