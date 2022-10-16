@@ -202,6 +202,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Estalador
       objectReference: {fileID: 0}
+    - target: {fileID: 7306824664587245758, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.34660912
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306824664587245758, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.6123595
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c829465ea24fd024999f599a6e668c2e, type: 3}
 --- !u!95 &2252998231875282900 stripped
