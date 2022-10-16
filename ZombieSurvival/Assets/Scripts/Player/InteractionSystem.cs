@@ -33,6 +33,10 @@ public class InteractionSystem : MonoBehaviour
                 {
                     if (player.GetComponent<SpriteRenderer>().enabled == false && player.position.x == hidingSpot.position.x)
                     {
+                        if (player.GetComponent<PlayerAttack>() != null)
+                        {
+                            player.GetComponent<PlayerAttack>().enabled = true;
+                        }
                         player.GetComponent<SpriteRenderer>().enabled = true;
                         player.GetComponent<PlayerMovement>().enabled = true;
                         player.GetComponent<BoxCollider2D>().enabled = true;
@@ -41,6 +45,10 @@ public class InteractionSystem : MonoBehaviour
                     {
                         Vector2 hidingPos = new Vector2(hidingSpot.position.x, player.position.y);
 
+                        if (player.GetComponent<PlayerAttack>() != null)
+                        {
+                            player.GetComponent<PlayerAttack>().enabled = false;
+                        }
                         player.GetComponent<SpriteRenderer>().enabled = false;
                         player.GetComponent<PlayerMovement>().enabled = false;
                         player.GetComponent<BoxCollider2D>().enabled = false;
