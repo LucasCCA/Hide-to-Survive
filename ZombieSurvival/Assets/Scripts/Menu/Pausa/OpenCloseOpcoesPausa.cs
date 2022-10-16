@@ -5,11 +5,11 @@ using UnityEngine.EventSystems;
 
 public class OpenCloseOpcoesPausa : MonoBehaviour
 {
-    [SerializeField] GameObject gameObject;
+    [SerializeField] GameObject gameObjectt;
     [SerializeField] GameObject pausaMorteGameObject;
     void Start()
     {
-        gameObject.SetActive(false);
+        gameObjectt.SetActive(false);
     }
 
     // Update is called once per frame
@@ -23,14 +23,14 @@ public class OpenCloseOpcoesPausa : MonoBehaviour
         if (pausaMorteGameObject.activeSelf)
         {
             pausaMorteGameObject.SetActive(false);
-            gameObject.SetActive(true);
+            gameObjectt.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
         }
     }
 
     public void ClosingPausaMorteGameObject()
     {
-        if(gameObject.activeSelf)
+        if(gameObjectt.activeSelf)
         {
             pausaMorteGameObject.SetActive(false);
         }

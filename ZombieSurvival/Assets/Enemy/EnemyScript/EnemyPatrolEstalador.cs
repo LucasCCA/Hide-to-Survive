@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyPatrol : MonoBehaviour
+public class EnemyPatrolEstalador : MonoBehaviour
 {
     [Header("Patrol Points")]
     [SerializeField] private Transform leftEdge;
@@ -12,7 +12,7 @@ public class EnemyPatrol : MonoBehaviour
 
     [Header("Move parameters")]
     public float enemySpeed;
-    [SerializeField]private EnemyAI enemyAI;
+    [SerializeField]private EnemyAIEstalador1 enemyAI;
 
     private Vector3 initScale;
     private bool movingLeft;

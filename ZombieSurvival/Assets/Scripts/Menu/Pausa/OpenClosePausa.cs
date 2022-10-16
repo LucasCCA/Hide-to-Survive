@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class OpenClosePausa : MonoBehaviour
 {
-    [SerializeField] GameObject gameObject;
+    [SerializeField] private GameObject gameObjectt;
     void Start()
     {
         ClosePausa();
@@ -22,20 +22,20 @@ public class OpenClosePausa : MonoBehaviour
     {
         if (Input.GetButtonDown("Cancel"))
         {
-            if (gameObject.activeSelf)
+            if (gameObjectt.activeSelf)
             {
                 ClosePausa();
             }
             else
             {
-                gameObject.SetActive(true);
+                gameObjectt.SetActive(true);
             }
         }
     }
 
     public void ClosePausa()
     {
-        gameObject.SetActive(false);
+        gameObjectt.SetActive(false);
         EventSystem.current.SetSelectedGameObject(null);
     }
 

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class OpenCloseMorte : MonoBehaviour
 {
-    [SerializeField] GameObject gameObject;
+    [SerializeField] GameObject gameObjectt;
     [SerializeField] PlayerHealth playerHealth;
     void Start()
     {
-        gameObject.SetActive(false);
+        gameObjectt.SetActive(false);
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class OpenCloseMorte : MonoBehaviour
     {
         if (!PlayerLives())
         {
-            gameObject.SetActive(true);
+            gameObjectt.SetActive(true);
         }
     }
 
