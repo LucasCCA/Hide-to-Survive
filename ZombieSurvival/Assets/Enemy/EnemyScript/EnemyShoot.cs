@@ -8,7 +8,6 @@ public class EnemyShoot : MonoBehaviour
     [SerializeField] private GameObject projectilePrefab;
     public EnemyAIBichoEsgoto enemyAIEsgoto;
     [SerializeField] private Animator anim;
-    public float attackRate = 2f;
     private float nextAttackTime = 0f;
     private bool ativaAtaque = false;
     //[SerializeField] float velocity = 4f;

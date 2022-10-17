@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fe6c87269935a6341b4fecb5fefe58e8
+guid: 5e1c38f4270e1d04ca4943ac9f22fa03
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,112 +103,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: bichoesgoto-export_0
-      rect:
-        serializedVersion: 2
-        x: 228
-        y: 239
-        width: 183
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 250df903f429d26429b115555e852828
-      internalID: -997040654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bichoesgoto-export_1
-      rect:
-        serializedVersion: 2
-        x: 809
-        y: 219
-        width: 232
-        height: 103
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c85aac58c7936e458f36be58394ea7f
-      internalID: -1672992335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bichoesgoto-export_2
-      rect:
-        serializedVersion: 2
-        x: 1448
-        y: 249
-        width: 224
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9e08c24ce66daa48b25689f299c9bf3
-      internalID: -495085689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bichoesgoto-export_3
-      rect:
-        serializedVersion: 2
-        x: 2139
-        y: 239
-        width: 172
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdf9ac3db129e5746a47fb437c9940b6
-      internalID: -216932530
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bichoesgoto-export_4
-      rect:
-        serializedVersion: 2
-        x: 2789
-        y: 248
-        width: 152
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 112f4b62e55b0ca4c9720e8e8740caed
-      internalID: -1147359993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -219,12 +114,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      bichoesgoto-export_2: -495085689
-      bichoesgoto-export_3: -216932530
-      bichoesgoto-export_4: -1147359993
-      bichoesgoto-export_1: -1672992335
-      bichoesgoto-export_0: -997040654
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
