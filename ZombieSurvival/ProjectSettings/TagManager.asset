@@ -10,6 +10,7 @@ TagManager:
   - ParaProjetil
   - Estalador
   - NextLevel
+  - SlowDown
   layers:
   - Default
   - TransparentFX

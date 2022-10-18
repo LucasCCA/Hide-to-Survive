@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
 
     StaminaSystem staminaSystem;
 
+    [SerializeField] DecreasePlayerSpeed decreasePlayerSpeed;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -39,20 +41,79 @@ public class PlayerMovement : MonoBehaviour
 
     void Run()
     {
-        if(Input.GetButton("Jump") && Input.GetButton("Horizontal"))
+        if (decreasePlayerSpeed == null)
         {
-            if (staminaSystem.currentStamina > 0)
+            if (Input.GetButton("Jump") && Input.GetButton("Horizontal"))
             {
-                speed = 6f;
+                if (staminaSystem.currentStamina > 0)
+                {
+                    speed = 6f;
+                }
+                else if (staminaSystem.currentStamina <= 0)
+                {
+                    speed = 3f;
+                }
             }
-            else if (staminaSystem.currentStamina <= 0)
+            else if (Input.GetButtonUp("Jump"))
             {
                 speed = 3f;
             }
         }
-        else if(Input.GetButtonUp("Jump"))
+        
+        if (decreasePlayerSpeed != null)
         {
-            speed = 3f;
+            if (Input.GetButton("Jump") && Input.GetButton("Horizontal"))
+            {
+                if (decreasePlayerSpeed.enabled == false)
+                {
+                    if (staminaSystem.currentStamina > 0)
+                    {
+                        speed = 6f;
+                    }
+                    else if (staminaSystem.currentStamina <= 0)
+                    {
+                        speed = 3f;
+                    }
+                }
+                else
+                {
+                    if (staminaSystem.currentStamina > 0)
+                    {
+                        speed = 4f;
+                    }
+                    else if (staminaSystem.currentStamina <= 0)
+                    {
+                        speed = 2f;
+                    }
+                }
+            }
+            else if (Input.GetButtonUp("Jump"))
+            {
+                if (decreasePlayerSpeed.enabled == false)
+                {
+                    speed = 3f;
+                }
+                else
+                {
+                    speed = 2f;
+                }
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("SlowDown"))
+        {
+            decreasePlayerSpeed.enabled = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("SlowDown"))
+        {
+            decreasePlayerSpeed.enabled = false;
         }
     }
 }
