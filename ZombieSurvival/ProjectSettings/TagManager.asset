@@ -11,6 +11,7 @@ TagManager:
   - Estalador
   - NextLevel
   - SlowDown
+  - Cuspidor
   layers:
   - Default
   - TransparentFX

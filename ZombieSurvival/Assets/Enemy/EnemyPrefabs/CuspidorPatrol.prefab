@@ -80,9 +80,10 @@ GameObject:
   - component: {fileID: 3495136887441991864}
   - component: {fileID: 3495136887441991871}
   - component: {fileID: 3495136887441991870}
+  - component: {fileID: 5921555214360967246}
   m_Layer: 7
   m_Name: Cuspidor
-  m_TagString: Untagged
+  m_TagString: Cuspidor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +101,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3495136888375748242}
-  - {fileID: 3495136887644076714}
   m_Father: {fileID: 3495136886950643996}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -260,6 +260,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCurrentHealth: 0
+--- !u!114 &5921555214360967246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3495136887441991868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d91950a6852f6498f91a3a3789bf69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cuspidorPatrol: {fileID: 3495136886950643987}
+  cuspidorAI: {fileID: 3495136887441991871}
+  player: {fileID: 0}
 --- !u!1 &3495136887626952831
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,37 +304,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3495136886950643996}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3495136887644076713
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3495136887644076714}
-  m_Layer: 0
-  m_Name: ParaProjetil
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3495136887644076714
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3495136887644076713}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3495136887441991869}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3495136888375748241

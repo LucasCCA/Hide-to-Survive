@@ -58,6 +58,14 @@ public class PlayerAttack : MonoBehaviour
                 estaladorLevaDano.ChangeDirectionWhenHit();
                 StartCoroutine(estaladorLevaDano.StopPatrol());
             }
+            else if(enemy.CompareTag("Cuspidor"))
+            {
+                CuspidorLevaDano cuspidorLevaDano = enemy.GetComponent<CuspidorLevaDano>();
+                EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
+                enemyHealth.DiminuiVida(25);
+                cuspidorLevaDano.ChangeDirectionWhenHit();
+                StartCoroutine(cuspidorLevaDano.StopPatrol());
+            }
         }
     }
 
