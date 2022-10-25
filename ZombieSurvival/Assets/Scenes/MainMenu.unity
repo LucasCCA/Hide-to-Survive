@@ -264,7 +264,7 @@ SpriteRenderer:
   m_SortingLayerID: -70761333
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1930967360, guid: f546cbb717c75ff4e99990bd4a538974, type: 3}
+  m_Sprite: {fileID: -750408811, guid: 6a262e33533f3b74da0147bc3c94fb83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3203,7 +3203,7 @@ MonoBehaviour:
     m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 2055116930}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnDown: {fileID: 2091144867}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 2

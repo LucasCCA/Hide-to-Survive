@@ -46,11 +46,13 @@ public class StaminaSystem : MonoBehaviour
     {
         if (currentStamina < maxStamina)
         {
-            staminaBar.SetActive(true);
+            staminaBar.GetComponent<Image>().enabled = true;
+            staminaBar.transform.GetChild(0).GetComponent<Image>().enabled = true;
         }
         else
         {
-            staminaBar.SetActive(false);
+            staminaBar.GetComponent<Image>().enabled = false;
+            staminaBar.transform.GetChild(0).GetComponent<Image>().enabled = false;
         }
     }
 
