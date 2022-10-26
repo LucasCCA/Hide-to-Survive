@@ -7,7 +7,6 @@ public class ProjetilCuspidor : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private int damage;
     [SerializeField] private Rigidbody2D rb;
-    bool facingRight = true;
 
     void Start()
     {
