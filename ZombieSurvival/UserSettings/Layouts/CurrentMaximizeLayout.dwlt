@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 288.8
     height: 425.6
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0a110200
-      m_LastClickedID: 135434
-      m_ExpandedIDs: 9689feff328cfeff009bfeffd29dfefffa9efeff609ffeff58a2feff6ea5feff6ca8feff34a9feff04adfeff6eaefefff4affeff7caaffff70b2ffff96faffff786f0000b46f0000da6f0000147000006a700000b87000006802020008040200e4100200941202009e120200
+      m_SelectedIDs: 3a750000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 56f8ffffe2faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 840.00006
     height: 425.6
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 8}
@@ -525,9 +525,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.026190981, y: -1.402732, z: 0.9055043}
+    m_Target: {x: -6.927808, y: -0.09807664, z: 0.06572802}
     speed: 2
-    m_Value: {x: -0.026190981, y: -1.402732, z: 0.9055043}
+    m_Value: {x: -6.927808, y: -0.09807664, z: 0.06572802}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -578,9 +578,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.133888
+    m_Target: 9.543769
     speed: 2
-    m_Value: 5.133888
+    m_Value: 9.543769
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -755,22 +755,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Menu
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Menu
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Lucas\Downloads\Jogo PI 2\Hide-for-Survival\ZombieSurvival
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 35.80002}
-    m_SelectedIDs: 28750000
-    m_LastClickedID: 29992
-    m_ExpandedIDs: 000000001c75000000ca9a3b
+    m_SelectedIDs: 26730000
+    m_LastClickedID: 29478
+    m_ExpandedIDs: 000000001673000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -798,7 +798,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001c75000000ca9a3b
+    m_ExpandedIDs: 0000000016730000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -823,10 +823,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 0a110200
-    m_LastClickedInstanceID: 135434
+    m_SelectedInstanceIDs: 3a750000
+    m_LastClickedInstanceID: 30010
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000c6bf0000827800003cd600007a6d0000fccf000010d10000aa7f000044770000487700003c7700004c770000
+    m_ExpandedInstanceIDs: c6230000c6bf0000827800003cd600007a6d0000fccf000010d10000aa7f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -850,7 +850,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 58.80002}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -912,7 +912,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -94294
+  m_LastSelectedObjectID: 135434
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -932,8 +932,8 @@ MonoBehaviour:
     y: 0
     width: 407.19995
     height: 722.8
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
