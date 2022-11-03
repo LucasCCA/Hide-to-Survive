@@ -69,7 +69,7 @@ public class LoboPatrol : MonoBehaviour
 
     private void UpdateRangeWhenInLeft()
     {
-        enemyAI.range = Mathf.Abs(enemy.position.x - leftEdge.position.x) / 3f;
+        enemyAI.range = Mathf.Abs(enemy.position.x - leftEdge.position.x) / 2.8f;
     }
 
     private void UpdateRangeWhenInRight()

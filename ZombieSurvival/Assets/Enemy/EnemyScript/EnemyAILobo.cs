@@ -44,16 +44,16 @@ public class EnemyAILobo : MonoBehaviour
             if (ativaAtaque)
             {
                 animator.SetBool("andar", false);
-                enemyPatrol.enabled = false;
-                animator.SetBool("loboBatendo", true);
+                enemyPatrol.enemySpeed = 3;
+                animator.SetBool("loboOlhosVermelhos", true);
             }
 
         }
         else
         {
-            animator.SetBool("loboBatendo", false);
+            enemyPatrol.enemySpeed = 1;
+            animator.SetBool("loboOlhosVermelhos", false);
             animator.SetBool("andar", true);
-            enemyPatrol.enabled = true;
         }
 
     }

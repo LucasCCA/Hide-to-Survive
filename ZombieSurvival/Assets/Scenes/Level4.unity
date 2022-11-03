@@ -12821,7 +12821,7 @@ Animator:
   m_GameObject: {fileID: 2127586607}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2a87eeed983b7004ca76914c2fce47cc, type: 2}
+  m_Controller: {fileID: 9100000, guid: c808f602a67991d4795811bd496d8a93, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -12915,7 +12915,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  colliderDistance: 1.9
+  colliderDistance: 1.4
   animator: {fileID: 2127586608}
   playerHealth: {fileID: 1238870328}
   enemyPatrol: {fileID: 799468290}
@@ -12933,7 +12933,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.29411197, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -12944,7 +12944,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.2, y: 4.8}
+  m_Size: {x: 2.6117759, y: 4.8}
   m_EdgeRadius: 0
 --- !u!1001 &6736905192876996675
 PrefabInstance:
