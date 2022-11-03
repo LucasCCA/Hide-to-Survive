@@ -5389,7 +5389,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 1293076439
   m_SortingLayer: 5
-  m_SortingOrder: 1
+  m_SortingOrder: 0
 --- !u!212 &911700445
 SpriteRenderer:
   m_ObjectHideFlags: 0
