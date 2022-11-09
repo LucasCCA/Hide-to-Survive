@@ -12916,9 +12916,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   colliderDistance: 1.4
+  distance: 2
   animator: {fileID: 2127586608}
   playerHealth: {fileID: 1238870328}
   enemyPatrol: {fileID: 799468290}
+  player: {fileID: 1238870324}
+  enemy: {fileID: 2127586610}
   range: 0
 --- !u!61 &2127586612
 BoxCollider2D:
@@ -12936,8 +12939,8 @@ BoxCollider2D:
   m_Offset: {x: 0.29411197, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.2, y: 4.8}
+    pivot: {x: 0.2693727, y: 0.5}
+    oldSize: {x: 5.42, y: 5.3100004}
     newSize: {x: 3.2, y: 4.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

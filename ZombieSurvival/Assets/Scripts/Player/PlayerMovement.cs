@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 3f;
+    public float speed;
 
     Animator animator;
 
@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        speed = 3f;
         animator = GetComponent<Animator>();
         staminaSystem = GetComponent<StaminaSystem>();
     }
@@ -101,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("SlowDown"))
         {

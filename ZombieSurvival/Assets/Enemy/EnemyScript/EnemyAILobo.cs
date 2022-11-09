@@ -8,10 +8,12 @@ public class EnemyAILobo : MonoBehaviour
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private float colliderDistance;
+    [SerializeField] private float distance;
     [SerializeField] private Animator animator;
     [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private LoboPatrol enemyPatrol;
-
+    [SerializeField] private Transform player;
+    [SerializeField] private Transform enemy;
 
     private bool ativaAtaque = false;
     public float range;
@@ -46,6 +48,12 @@ public class EnemyAILobo : MonoBehaviour
                 animator.SetBool("andar", false);
                 enemyPatrol.enemySpeed = 3;
                 animator.SetBool("loboOlhosVermelhos", true);
+                animator.SetBool("loboBatendo", false);
+                if (PlayerInAttackRange())
+                {
+                    enemyPatrol.enemySpeed = 0;
+                    animator.SetBool("loboBatendo", true);
+                }
             }
 
         }
@@ -54,8 +62,18 @@ public class EnemyAILobo : MonoBehaviour
             enemyPatrol.enemySpeed = 1;
             animator.SetBool("loboOlhosVermelhos", false);
             animator.SetBool("andar", true);
+            animator.SetBool("loboBatendo", false);
         }
 
+    }
+
+    private bool PlayerInAttackRange()
+    {
+        if (player.position.x >= enemy.position.x - distance)
+        {
+            return true;
+        }
+        return false;
     }
 
 

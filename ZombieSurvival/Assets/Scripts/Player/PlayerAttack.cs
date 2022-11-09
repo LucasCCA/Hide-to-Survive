@@ -62,7 +62,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 CuspidorLevaDano cuspidorLevaDano = enemy.GetComponent<CuspidorLevaDano>();
                 EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
-                enemyHealth.DiminuiVida(25);
+                enemyHealth.DiminuiVida(35);
                 cuspidorLevaDano.ChangeDirectionWhenHit();
                 StartCoroutine(cuspidorLevaDano.StopPatrol());
             }
@@ -81,6 +81,7 @@ public class PlayerAttack : MonoBehaviour
 
     IEnumerator StopWalking()
     {
+        pm.speed = 3f;
         pm.enabled = false;
 
         yield return new WaitForSeconds(0.5f);
