@@ -223,10 +223,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 8}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 960affff081dffffbe28ffff5e37ffff6037ffffba38ffff2c3bffff0c43ffff6659ffffb47dfffff880ffff10d3ffff8cf2ffffb8f8ffffd4faffffa2780000de7800004a790000847c00003e9e0000949e0000d6b00000b23c0100443d0100aa5f0100be720100147301002e730100627301008c730100a8750100e8750100
+      m_ExpandedIDs: f8f1ffff02f4ffffb4f5ffff40f7ffffb2faffff966f0000c687000004920000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -525,9 +525,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -41.7421, y: -3.9723604, z: -2.2507617}
+    m_Target: {x: -42.70765, y: -1.6183894, z: -2.3466496}
     speed: 2
-    m_Value: {x: -41.7421, y: -3.9723604, z: -2.2507617}
+    m_Value: {x: -42.70765, y: -1.6183894, z: -2.3466496}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -578,9 +578,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.974407
+    m_Target: 12.429927
     speed: 2
-    m_Value: 9.974407
+    m_Value: 12.429927
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -822,22 +822,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\J\xFAlia V\\Documents\\MeusDocs\\PI2\\Projeto\\ZombieSurvival"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 199}
-    m_SelectedIDs: 46760000
-    m_LastClickedID: 30278
-    m_ExpandedIDs: 00000000307600003a76000000ca9a3bffffff7f
+    m_SelectedIDs: f8770000
+    m_LastClickedID: 30712
+    m_ExpandedIDs: 000000004c7600004e76000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -865,7 +865,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000307600003a76000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000004c7600004e760000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
