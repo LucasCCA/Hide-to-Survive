@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b0a2d6471471ef34fb5b1b565e675df7
+guid: c7c0112317c509f4590543d984646970
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -63,14 +63,14 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,91 +103,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: loboBatendo-Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 0
-        width: 542
-        height: 531
-      alignment: 9
-      pivot: {x: 0.29520294, y: 0.4519774}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 892646cb2dcdcb641a5977a5b5e4d59f
-      internalID: 1206146108
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: loboBatendo-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 659
-        y: 0
-        width: 482
-        height: 531
-      alignment: 9
-      pivot: {x: 0.33195022, y: 0.4519774}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0baffd0711b73f14f9faaa72c34322ac
-      internalID: -845810954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: loboBatendo-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 1301
-        y: 0
-        width: 292
-        height: 540
-      alignment: 9
-      pivot: {x: 0.5479452, y: 0.44444445}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 558c4699b91124341b0d4b13fb709630
-      internalID: 1479823848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: loboBatendo-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 1929
-        y: 0
-        width: 282
-        height: 531
-      alignment: 9
-      pivot: {x: 0.5673759, y: 0.4519774}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a22aea9fa35257489fa44ff545f2bd5
-      internalID: -825765665
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -198,11 +114,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      loboBatendo-Sheet_3: -825765665
-      loboBatendo-Sheet_1: -845810954
-      loboBatendo-Sheet_2: 1479823848
-      loboBatendo-Sheet_0: 1206146108
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

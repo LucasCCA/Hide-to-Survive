@@ -12,6 +12,7 @@ TagManager:
   - NextLevel
   - SlowDown
   - Cuspidor
+  - Lobo
   layers:
   - Default
   - TransparentFX

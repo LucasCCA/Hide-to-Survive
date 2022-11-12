@@ -75,27 +75,19 @@ public class EnemyAILobo : MonoBehaviour
 
     private bool PlayerInAttackRange()
     {
-        if (player.position.x >= enemy.position.x - distance)
+        if (Mathf.Abs(player.position.x - enemy.position.x) <= distance)
         {
             return true;
         }
         return false;
     }
 
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            EnemyKillPlayer();
-        }
-    }
     private float EnemyKillPlayer()
     {
         return PlayerHealth.playerCurrentHealth -= damage;
     }
 
-    void Attack()
+    private void Attack()
     {
         //Damage
         if (playerColliderDetector != null)

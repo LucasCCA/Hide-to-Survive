@@ -14,12 +14,6 @@ public class EnemyAIEstalador1 : MonoBehaviour
     public float range;
 
 
-
-    private void Awake()
-    {
-
-    }
-
     private void Update()
     {
         SetAttack();

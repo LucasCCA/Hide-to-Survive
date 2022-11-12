@@ -12,8 +12,6 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] LayerMask enemyLayers;
 
-    [SerializeField] PlayerMovement pm;
-
     public float attackRate = 2f;
     float nextAttackTime = 0f;
 
@@ -49,22 +47,29 @@ public class PlayerAttack : MonoBehaviour
         //Damage
         foreach (Collider2D enemy in hitEnemies)
         {
-            //enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
             if(enemy.CompareTag("Estalador"))
             {
-                EstaladorLevaDano estaladorLevaDano = enemy.GetComponent<EstaladorLevaDano>();
+                EstaladorMudaDirecao estaladorMudaDirecao = enemy.GetComponent<EstaladorMudaDirecao>();
                 EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
                 enemyHealth.DiminuiVida(50);
-                estaladorLevaDano.ChangeDirectionWhenHit();
-                StartCoroutine(estaladorLevaDano.StopPatrol());
+                estaladorMudaDirecao.ChangeDirectionWhenHit();
+                StartCoroutine(estaladorMudaDirecao.StopPatrol());
             }
             else if(enemy.CompareTag("Cuspidor"))
             {
-                CuspidorLevaDano cuspidorLevaDano = enemy.GetComponent<CuspidorLevaDano>();
+                CuspidorMudaDirecao cuspidorMudaDirecao = enemy.GetComponent<CuspidorMudaDirecao>();
                 EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
                 enemyHealth.DiminuiVida(35);
-                cuspidorLevaDano.ChangeDirectionWhenHit();
-                StartCoroutine(cuspidorLevaDano.StopPatrol());
+                cuspidorMudaDirecao.ChangeDirectionWhenHit();
+                StartCoroutine(cuspidorMudaDirecao.StopPatrol());
+            }
+            else if(enemy.CompareTag("Lobo"))
+            {
+                LoboMudaDirecao loboMudaDirecao = enemy.GetComponent<LoboMudaDirecao>();
+                EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
+                enemyHealth.DiminuiVida(25);
+                loboMudaDirecao.ChangeDirectionWhenHit(); 
+                StartCoroutine(loboMudaDirecao.StopPatrol()); 
             }
         }
     }
@@ -81,11 +86,16 @@ public class PlayerAttack : MonoBehaviour
 
     IEnumerator StopWalking()
     {
+        InteractionSystem interactionSystem = GetComponent<InteractionSystem>();
+        PlayerMovement pm = GetComponent<PlayerMovement>();
+
+        interactionSystem.enabled = false;
         pm.speed = 3f;
         pm.enabled = false;
 
         yield return new WaitForSeconds(0.5f);
 
         pm.enabled = true;
+        interactionSystem.enabled = true;
     }
 }
