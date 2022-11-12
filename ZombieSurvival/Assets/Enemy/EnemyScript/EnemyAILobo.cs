@@ -15,11 +15,17 @@ public class EnemyAILobo : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private Transform enemy;
 
+    [SerializeField] Transform attackPoint;
+    [SerializeField] float attackRange = 0.5f;
+    public int attackDamage = 25;
+    Collider2D playerColliderDetector;
+
     private bool ativaAtaque = false;
     public float range;
 
     private void Update()
     {
+        playerColliderDetector = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
         SetAttack();
     }
 
@@ -87,5 +93,24 @@ public class EnemyAILobo : MonoBehaviour
     private float EnemyKillPlayer()
     {
         return PlayerHealth.playerCurrentHealth -= damage;
+    }
+
+    void Attack()
+    {
+        //Damage
+        if (playerColliderDetector != null)
+        {
+            EnemyKillPlayer();
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+        {
+            return;
+        }
+
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

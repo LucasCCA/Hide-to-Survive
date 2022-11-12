@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
+    public float speed = 3f;
 
     Animator animator;
 
@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        speed = 3f;
         animator = GetComponent<Animator>();
         staminaSystem = GetComponent<StaminaSystem>();
     }

@@ -49,7 +49,7 @@ public class PlayerAttack : MonoBehaviour
         //Damage
         foreach (Collider2D enemy in hitEnemies)
         {
-            Debug.Log("acertou"); //enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
+            //enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
             if(enemy.CompareTag("Estalador"))
             {
                 EstaladorLevaDano estaladorLevaDano = enemy.GetComponent<EstaladorLevaDano>();
