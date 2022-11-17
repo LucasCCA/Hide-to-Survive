@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class StaminaSystem : MonoBehaviour
 {
+    PlayerMovement pm;
+
     [SerializeField] GameObject staminaBar;
 
     [SerializeField] Image staminaFill;
@@ -17,6 +19,7 @@ public class StaminaSystem : MonoBehaviour
    
     void Start()
     {
+        pm = GetComponent<PlayerMovement>();
         currentStamina = maxStamina;
     }
 
@@ -29,14 +32,14 @@ public class StaminaSystem : MonoBehaviour
 
     void DecreaseStamina()
     {
-        if(Input.GetButton("Jump") && Input.GetButton("Horizontal"))
+        if(Input.GetButton("Jump") && Input.GetButton("Horizontal") && pm.enabled == true)
         {
             if (currentStamina > 0)
             {
                 currentStamina -= decreaseValue * Time.deltaTime;
             }    
         }
-        else if (Input.GetButtonUp("Jump"))
+        else if (Input.GetButtonUp("Jump") || Input.GetButtonUp("Horizontal"))
         {
             StartCoroutine(RegenStamina());
         }
@@ -63,7 +66,7 @@ public class StaminaSystem : MonoBehaviour
         while (currentStamina < maxStamina)
         {
             currentStamina += regenValue * Time.deltaTime;
-            if (Input.GetButton("Jump") && Input.GetButton("Horizontal"))
+            if (Input.GetButton("Jump") && Input.GetButton("Horizontal") && pm.enabled == true)
                 break;
             yield return new WaitForSeconds(0.01f);
         }

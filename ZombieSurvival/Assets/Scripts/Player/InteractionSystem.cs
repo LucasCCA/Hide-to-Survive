@@ -48,6 +48,7 @@ public class InteractionSystem : MonoBehaviour
                             player.GetComponent<PlayerAttack>().enabled = false;
                         }
                         player.GetComponent<SpriteRenderer>().enabled = false;
+                        player.GetComponent<PlayerMovement>().speed = 3f;
                         player.GetComponent<PlayerMovement>().enabled = false;
                         player.GetComponent<BoxCollider2D>().enabled = false;
 

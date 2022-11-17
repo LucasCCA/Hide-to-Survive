@@ -41,9 +41,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Run()
     {
-        if (decreasePlayerSpeed == null)
+        if (Input.GetButton("Jump") && Input.GetButton("Horizontal"))
         {
-            if (Input.GetButton("Jump") && Input.GetButton("Horizontal"))
+            if (decreasePlayerSpeed == null || decreasePlayerSpeed.enabled == false)
             {
                 if (staminaSystem.currentStamina > 0)
                 {
@@ -54,54 +54,32 @@ public class PlayerMovement : MonoBehaviour
                     speed = 3f;
                 }
             }
-            else if (Input.GetButtonUp("Jump"))
-            {
-                speed = 3f;
-            }
-        }
-        
-        if (decreasePlayerSpeed != null)
+            else if (decreasePlayerSpeed != null && decreasePlayerSpeed.enabled == true)
         {
-            if (Input.GetButton("Jump") && Input.GetButton("Horizontal"))
-            {
-                if (decreasePlayerSpeed.enabled == false)
+                if (staminaSystem.currentStamina > 0)
                 {
-                    if (staminaSystem.currentStamina > 0)
-                    {
-                        speed = 6f;
-                    }
-                    else if (staminaSystem.currentStamina <= 0)
-                    {
-                        speed = 3f;
-                    }
+                    speed = 4f;
                 }
-                else
-                {
-                    if (staminaSystem.currentStamina > 0)
-                    {
-                        speed = 4f;
-                    }
-                    else if (staminaSystem.currentStamina <= 0)
-                    {
-                        speed = 2f;
-                    }
-                }
-            }
-            else if (Input.GetButtonUp("Jump"))
-            {
-                if (decreasePlayerSpeed.enabled == false)
-                {
-                    speed = 3f;
-                }
-                else
+                else if (staminaSystem.currentStamina <= 0)
                 {
                     speed = 2f;
                 }
             }
         }
+        else if (Input.GetButtonUp("Jump") || Input.GetButtonUp("Horizontal"))
+        {
+            if (decreasePlayerSpeed == null || decreasePlayerSpeed.enabled == false)
+            {
+                speed = 3f;
+            }
+            else if (decreasePlayerSpeed != null && decreasePlayerSpeed.enabled == true)
+        {
+                speed = 2f;
+            }
+        }
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("SlowDown"))
         {
