@@ -90,7 +90,15 @@ public class PlayerAttack : MonoBehaviour
         PlayerMovement pm = GetComponent<PlayerMovement>();
 
         interactionSystem.enabled = false;
-        pm.speed = 3f;
+
+        if (pm.decreasePlayerSpeed != null && pm.decreasePlayerSpeed.enabled == true)
+        {
+            pm.speed = 2f;
+        }
+        else if (pm.decreasePlayerSpeed == null || pm.decreasePlayerSpeed.enabled == false)
+        {
+            pm.speed = 3f;
+        }
         pm.enabled = false;
 
         yield return new WaitForSeconds(0.5f);

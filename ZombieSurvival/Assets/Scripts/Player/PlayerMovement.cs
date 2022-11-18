@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     StaminaSystem staminaSystem;
 
-    [SerializeField] DecreasePlayerSpeed decreasePlayerSpeed;
+    [SerializeField] public DecreasePlayerSpeed decreasePlayerSpeed;
 
     void Start()
     {
