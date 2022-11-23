@@ -30,7 +30,6 @@ public class PlayerHealth : MonoBehaviour
     {
         if(playerCurrentHealth <= 0)
         {
-            sfx.Play();
             Destroy(this.gameObject);
         }
     }
