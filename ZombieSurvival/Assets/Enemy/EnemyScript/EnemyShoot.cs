@@ -8,6 +8,7 @@ public class EnemyShoot : MonoBehaviour
     [SerializeField] private GameObject projectilePrefab;
     public EnemyAIBichoEsgoto enemyAIEsgoto;
     [SerializeField] private Animator anim;
+    [SerializeField] private AudioSource sfx;
     private float nextAttackTime = 0f;
     private bool ativaAtaque = false;
     //[SerializeField] float velocity = 4f;
@@ -40,6 +41,7 @@ public class EnemyShoot : MonoBehaviour
 
     void Shoot()
     {
+        sfx.Play();
         Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
     }
 

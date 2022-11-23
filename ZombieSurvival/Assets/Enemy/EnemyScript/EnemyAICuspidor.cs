@@ -9,6 +9,7 @@ public class EnemyAICuspidor : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private float colliderDistance;
     [SerializeField] private Animator animator;
+    [SerializeField] private AudioSource sfx;
     [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private CuspidorPatrol enemyPatrol;
 
@@ -62,6 +63,7 @@ public class EnemyAICuspidor : MonoBehaviour
 
     void Shoot()
     {
+        sfx.Play();
         Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
     }
 

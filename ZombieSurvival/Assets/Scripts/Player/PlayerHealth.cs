@@ -8,7 +8,8 @@ public class PlayerHealth : MonoBehaviour
     public static float playerCurrentHealth;
     private float playerMaxHealth = 100f;
     [SerializeField] private Image barraDeVida;
-    
+    [SerializeField] private AudioSource sfx;
+
     void Start()
     {
         playerCurrentHealth = playerMaxHealth;
@@ -29,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(playerCurrentHealth <= 0)
         {
+            sfx.Play();
             Destroy(this.gameObject);
         }
     }

@@ -10,6 +10,7 @@ public class EnemyAILobo : MonoBehaviour
     [SerializeField] private float colliderDistance;
     [SerializeField] private float distance;
     [SerializeField] private Animator animator;
+    [SerializeField] private AudioSource sfx;
     [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private LoboPatrol enemyPatrol;
     [SerializeField] private Transform player;
@@ -92,6 +93,7 @@ public class EnemyAILobo : MonoBehaviour
         //Damage
         if (playerColliderDetector != null)
         {
+            sfx.Play();
             EnemyKillPlayer();
         }
     }

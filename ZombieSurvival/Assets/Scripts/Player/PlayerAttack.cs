@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     private Animator animator;
+    [SerializeField] AudioSource sfx;
 
     [SerializeField] Transform attackPoint;
     [SerializeField] float attackRange = 0.5f;
@@ -38,6 +39,7 @@ public class PlayerAttack : MonoBehaviour
     {
         //Play Animation
         animator.SetTrigger("Attack");
+        sfx.Play();
 
         StartCoroutine(StopWalking());
 
